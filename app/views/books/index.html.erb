@@ -1,0 +1,43 @@
+<main>
+	<h1 class="index-title">Books</h1>
+	<div class="index-contents">
+		<table>
+			<tr>
+				<th class="ic1"><p>Title</p></th>
+				<th class="ic2"><p>Body</p></th>
+			</tr>
+			<% @books.each do |book| %>
+			<tr>
+				<td class="ip1"><p><%= book.title %></p></td>
+				<td class="ip2"><p><%= book.body %></p></td>
+				<td class="ip3"><p><%= link_to "Show", book_path(book) %></p></td>
+				<td class="ip4"><p><%= link_to "Edit", edit_book_path(book) %></p></td>
+				<td class="ip5"><P><%= link_to "destroy", book_path(book), method: :delete %></P></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+	<% if @book.errors.any? %>
+		<div id="error_explanation" class="alert alert-danger">
+			<ul>
+				<% @book.errors.full_messages.each do |message| %>
+				 <li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<h2 class="index-title2">New book</h2>
+	<%= form_for(@book) do |f| %>
+
+		<p>Title</p>
+		<%= f.text_field :title %>
+
+		<p>Body</p>
+		<%= f.text_field :body %>
+
+		<div class="create">
+			<%= f.submit 'Create Book', method: :post %>
+		</div>
+
+	<% end %>
+</main>

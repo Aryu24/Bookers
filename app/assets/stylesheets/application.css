@@ -1,0 +1,92 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*h1{
+	background-color:red;
+}*/
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+.clearfix::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+p{
+	font-size:13px;
+}
+a{
+	color:#000;
+}
+main{
+	width:90%;
+	margin-left:35px;
+}
+.index-title{
+	font-size:24px;
+	margin:22px 0 16px 0;
+}
+.ic1, .ip1{
+	width:200px;
+}
+.ic2, .ip2{
+	width:380px;
+}
+.ip3, .ip4, .ip5{
+	padding:0 5px;
+}
+.index-title2{
+	font-size:20px;
+	margin:15px 0;
+}
+.create{
+	padding-bottom:30px;
+}
+/*showページ*/
+.show-body{
+	margin:33px;
+}
+.show-body .sbc{
+	padding:0 0 30px 40px;
+}
+.show-body span{
+	font-weight:bold;
+}
+.se{
+	color:#000;
+}
+.sb{
+	color:#333;
+}
+/*Editページ*/
+.edit{
+	margin:33px;
+}
+.edit-title{
+	font-size:25px;
+	margin-bottom:10px;
+}
+.update{
+	margin:10px 0;
+}
+
+.flash{
+	font-size:13px;
+	color:green;
+	padding-bottom:30px;
+}
